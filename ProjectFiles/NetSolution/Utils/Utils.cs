@@ -58,6 +58,21 @@ namespace utilx.Utils
             var byteArray = (byte[])(sbyteVar as Array);
             res = Encoding.Unicode.GetString(byteArray);
         }
+
+        /// <summary>
+        /// Generate a sbyte[] from a string
+        /// </summary>
+        public static sbyte[] FromStringToSbyteArray(string input)
+        {
+            var byteArray = Encoding.UTF8.GetBytes(input);
+            var sByteArray = new sbyte[byteArray.Length];
+
+            for (int i = 0; i < byteArray.Length; i++)
+            {
+                sByteArray[i] = (sbyte)byteArray[i];
+            }
+            return sByteArray;
+        }
     }
 }
       

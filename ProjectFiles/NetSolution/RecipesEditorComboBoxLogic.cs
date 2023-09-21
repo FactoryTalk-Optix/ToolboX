@@ -14,6 +14,7 @@ using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.EventLogger;
 using FTOptix.CODESYS;
+using FTOptix.DataLogger;
 #endregion
 
 public class RecipesEditorComboBoxLogic : BaseNetLogic

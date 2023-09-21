@@ -10,6 +10,7 @@ using UAManagedCore;
 using FTOptix.HMIProject;
 using FTOptix.Core;
 using FTOptix.CODESYS;
+using FTOptix.DataLogger;
 #endregion
 
 public partial class DesignTimeNetLogic1 : BaseNetLogic

@@ -1,5 +1,4 @@
 /*
-README.md
 !*.gitignore
 !*.gitattributes
 !*.optix
@@ -13,3 +12,5 @@ ProjectFiles/NetSolution/obj
 ProjectFiles/NetSolution/Private
 ProjectFiles/NetSolution/*.references
 ProjectFiles/UserDefinedModule.xml
+!README.md
+!LICENSE

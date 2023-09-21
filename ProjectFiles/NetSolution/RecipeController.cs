@@ -14,6 +14,7 @@ using System.Globalization;
 using FTOptix.Store;
 using FTOptix.EventLogger;
 using FTOptix.CODESYS;
+using FTOptix.DataLogger;
 
 #endregion
 

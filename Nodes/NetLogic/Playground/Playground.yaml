@@ -99,3 +99,11 @@ Children:
     Value: {"IdType":2,"Id":"4fc99b46aa3b2a8bd3273fdcc7183a4f","Namespace":28}
   - Class: Method
     Name: GenerateNodesIntoModel
+- Name: RuntimeNetLogic1
+  Id: g=709c37ad02d5458658bf93dfef64db20
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: DeleteData
+  - Class: Method
+    Name: GenerateData

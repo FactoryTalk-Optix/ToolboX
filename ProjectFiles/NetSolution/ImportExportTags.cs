@@ -16,6 +16,7 @@ using FTOptix.S7TiaProfinet;
 using FTOptix.Alarm;
 using FTOptix.CODESYS;
 using utilx.Utils;
+using FTOptix.DataLogger;
 #endregion
 
 public class ImportExportTags : BaseNetLogic

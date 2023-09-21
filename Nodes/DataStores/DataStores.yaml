@@ -34,30 +34,6 @@ Children:
           Type: StoreColumn
           DataType: Int32
           Value: 0
-        - Name: /Variable2
-          Type: StoreColumn
-          DataType: Boolean
-          Value: false
-        - Name: /Variable3
-          Type: StoreColumn
-          DataType: UInt16
-          Value: 0
-        - Name: /Variable4
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: /Variable5
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: /Variable6
-          Type: StoreColumn
-          DataType: SByte
-          Value: 0
-        - Name: /Variable7
-          Type: StoreColumn
-          DataType: Duration
-          Value: "0:00:00:0.0000000"
   - Class: Reference
     Target: ns=17;i=30
     Direction: Forward

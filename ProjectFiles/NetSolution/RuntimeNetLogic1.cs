@@ -12,21 +12,22 @@ using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.Modbus;
 using FTOptix.S7TCP;
+using FTOptix.CODESYS;
 using FTOptix.Retentivity;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using utilx.Utils;
-using FTOptix.CODESYS;
 using FTOptix.DataLogger;
 #endregion
 
-public class PanelLoaderHistory : BaseNetLogic
+public class RuntimeNetLogic1 : BaseNetLogic
 {
-    private PanelLoaderHistoryManager panelLoaderHistoryManager;
+    private UtilsStore utilsStore;
 
     public override void Start()
     {
-        panelLoaderHistoryManager = UtilsScreens.CreatePanelLoaderHistoryManager(Owner.NodeId);
+        var store = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+        utilsStore = new UtilsStore(LogicObject, store);
     }
 
     public override void Stop()
@@ -35,21 +36,13 @@ public class PanelLoaderHistory : BaseNetLogic
     }
 
     [ExportMethod]
-    public void Next()
+    public void GenerateData()
     {
-        panelLoaderHistoryManager.HistoryForward();
+        utilsStore.PopulateTableWithRandomData("RecipeSchema1", 100);
     }
 
     [ExportMethod]
-    public void Previous()
-    {
-        panelLoaderHistoryManager.HistoryBack();
+    public void DeleteData() {
+        utilsStore.TruncateTableData("RecipeSchema1");
     }
-
-    [ExportMethod]
-    public void ClearHistory()
-    {
-        panelLoaderHistoryManager.ClearHistory();
-    }
-
 }

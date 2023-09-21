@@ -8,6 +8,7 @@ using System.Linq;
 using FTOptix.Alarm;
 using FTOptix.CODESYS;
 using utilx.Utils;
+using FTOptix.DataLogger;
 #endregion
 
 public class FromPLCToModel : BaseNetLogic

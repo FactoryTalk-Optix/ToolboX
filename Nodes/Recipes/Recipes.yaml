@@ -12,30 +12,6 @@ Children:
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
-    - Name: Variable2
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: false
-    - Name: Variable3
-      Type: BaseDataVariableType
-      DataType: UInt16
-      Value: 0
-    - Name: Variable4
-      Type: BaseDataVariableType
-      DataType: Float
-      Value: 0.0
-    - Name: Variable5
-      Type: BaseDataVariableType
-      DataType: String
-      Value: ""
-    - Name: Variable6
-      Type: BaseDataVariableType
-      DataType: SByte
-      Value: 0
-    - Name: Variable7
-      Type: BaseDataVariableType
-      DataType: Duration
-      Value: "0:00:00:0.0000000"
   - Class: Reference
     Target: ns=13;i=27
     Direction: Forward
@@ -84,41 +60,16 @@ Children:
   - Name: TargetNode
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"27dd2cb824916604fe8bad1671d45f9b","Namespace":28}
+    Value: {"IdType":2,"Id":"a9d355d646f54c18d3ce7e831c81606a","Namespace":28}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
       Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: EditModel
-    Id: g=576973a6c3671d73ba4ddb49c27070ad
     Type: BaseObjectType
     Children:
     - Name: Variable1
       Type: BaseDataVariableType
       DataType: Int32
       Value: 0
-    - Name: Variable2
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: false
-    - Name: Variable3
-      Type: BaseDataVariableType
-      DataType: UInt16
-      Value: 0
-    - Name: Variable4
-      Type: BaseDataVariableType
-      DataType: Float
-      Value: 0.0
-    - Name: Variable5
-      Type: BaseDataVariableType
-      DataType: String
-      Value: ""
-    - Name: Variable6
-      Type: BaseDataVariableType
-      DataType: SByte
-      Value: 0
-    - Name: Variable7
-      Type: BaseDataVariableType
-      DataType: Duration
-      Value: "0:00:00:0.0000000"

@@ -14,6 +14,7 @@ using System.Globalization;
 using FTOptix.Alarm;
 using FTOptix.CODESYS;
 using utilx.Utils;
+using FTOptix.DataLogger;
 #endregion
 
 public class ImportExportModel : BaseNetLogic

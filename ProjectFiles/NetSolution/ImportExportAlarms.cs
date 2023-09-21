@@ -18,6 +18,7 @@ using System.Linq;
 using FTOptix.Alarm;
 using System.Text.RegularExpressions;
 using System.Text;
+using FTOptix.DataLogger;
 #endregion
 
 public class ImportExportAlarms : BaseNetLogic
