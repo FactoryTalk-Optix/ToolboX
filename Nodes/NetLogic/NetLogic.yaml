@@ -1,0 +1,31 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- Name: ImportExportAlarms
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ExportAlarms
+  - Class: Method
+    Name: ImportAlarms
+  - Name: CSVPath
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Value: ""
+  - Name: CharacterSeparator
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: WrapFields
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: MessageAsTranslationKey
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+- File: Playground/Playground.yaml

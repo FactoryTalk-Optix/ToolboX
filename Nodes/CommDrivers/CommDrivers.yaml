@@ -1,0 +1,6 @@
+Name: CommDrivers
+Type: CommDriversCategoryFolder
+Children:
+- File: ModbusDriver1/ModbusDriver1.yaml
+- File: S7TCPDriver1/S7TCPDriver1.yaml
+- File: CODESYSDriver1/CODESYSDriver1.yaml

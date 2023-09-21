@@ -1,0 +1,55 @@
+Name: Converters
+Type: ConvertersCategoryFolder
+Children:
+- Name: KeyValueConverter1
+  Id: g=fb5ba8a6b524d7fee35a0abbf9a98844
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Pairs
+    Type: BaseObjectType
+    Children:
+    - Name: Pair
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 0
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{NodeId:ns=28;g=37a18a17-d718-53db-50ed-adf37019987a}"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+    - Name: Pair1
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 0
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/ToolboX/CommDrivers/ModbusDriver1/ModbusStation1/Tags/MobusTag3"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2

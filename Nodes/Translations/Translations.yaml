@@ -1,0 +1,37 @@
+Name: Translations
+Type: TranslationsCategoryFolder
+Children:
+- Name: LocalizationDictionary1
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [22,2],
+    "Body": [
+     "","en-US",
+     "Save","Save",
+     "Delete","Delete",
+     "RecipeControllerDeleted","deleted",
+     "RecipesEditorNotFound","not found",
+     "RecipesEditorNotSet","is not set",
+     "Load","Load",
+     "RecipeControllerSaved","saved",
+     "RecipeControllerCreatedAndSaved","created and saved",
+     "Apply","Apply",
+     "RecipeControllerEmptyRecipeName","Recipe name is empty",
+     "RecipeControllerRecipe","Recipe",
+     "RecipeControllerRecipeApplied","Recipe applied",
+     "RecipeControllerRecipeLoaded","Recipe loaded",
+     "RecipesEditorRecipeSchemaNotFound","RecipeSchema variable not found",
+     "RecipesEditorRecipeSchemaNotSet","RecipeSchema not set",
+     "RecipesEditorRecipeNotFound","Recipe not found",
+     "RecipesEditorNotARecipe","is not a recipe",
+     "RecipesEditorStoreOfSchema","Store of schema",
+     "RecipesEditorStore","Store",
+     "RecipesEditorNotAStore","is not a store",
+     "RecipesEditorEditModelOfSchema","EditModel of schema"
+    ]
+   }

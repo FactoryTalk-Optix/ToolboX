@@ -1,0 +1,32 @@
+Name: ModbusDriver1
+Type: ModbusDriver
+Children:
+- Name: Protocol
+  Type: BaseDataVariableType
+  DataType: ModbusProtocol
+  Value: 0
+- Name: SerialPort
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "COM1"
+- Name: Baudrate
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Value: 9600
+- Name: DataSize
+  Type: BaseDataVariableType
+  DataType: Byte
+  Value: 8
+- Name: Parity
+  Type: BaseDataVariableType
+  DataType: Parity
+  Value: 0
+- Name: StopBits
+  Type: BaseDataVariableType
+  DataType: StopBits
+  Value: 0
+- Name: FlowControl
+  Type: BaseDataVariableType
+  DataType: FlowControl
+  Value: 0
+- File: ModbusStation1/ModbusStation1.yaml

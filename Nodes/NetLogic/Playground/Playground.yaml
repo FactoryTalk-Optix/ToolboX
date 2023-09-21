@@ -1,0 +1,101 @@
+Name: Playground
+Type: FolderType
+Children:
+- Name: DesignTimeNetLogic1
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: Variable1
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/S7TCPTag1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Class: Method
+    Name: DeleteAllAlarm
+  - Class: Method
+    Name: GenerateAlarms
+  - Class: Method
+    Name: GetProjectInfos
+  - Class: Method
+    Name: GetProjectInfosElapsedTime
+- Name: RT_ProjectInfos
+  Id: g=ae27d5d2408a86fbb7514599cdbbe1be
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: GetProjectInfos
+  - Class: Method
+    Name: ResetEditModel
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"recipeSchemaNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: GetNodesNumber
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"screenNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: ImportExportModel
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: StartingNodeToFetch
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"a9d355d646f54c18d3ce7e831c81606a","Namespace":28}
+  - Class: Method
+    Name: ExportModelToCsv
+  - Class: Method
+    Name: ImportModelFromCsv
+- Name: ImportExportTags
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ExportToCsv
+  - Name: StartingNodeToFetch
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"4fc99b46aa3b2a8bd3273fdcc7183a4f","Namespace":28}
+  - Class: Method
+    Name: ImportOrUpdateFromCsv
+- Name: FromPLCToModel
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: StartingNodeToFetch
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"4fc99b46aa3b2a8bd3273fdcc7183a4f","Namespace":28}
+  - Class: Method
+    Name: GenerateNodesIntoModel

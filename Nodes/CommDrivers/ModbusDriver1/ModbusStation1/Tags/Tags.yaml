@@ -1,0 +1,67 @@
+Name: Tags
+Type: FolderType
+Children:
+- Name: ModbusTag1
+  Type: ModbusTag
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: ModbusMemoryArea
+    Value: 1
+- Name: ModbusTag2
+  Type: ModbusTag
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: ModbusMemoryArea
+    Value: 1
+- Name: ModbusTag3
+  Type: ModbusTag
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: ModbusMemoryArea
+    Value: 1
+- Name: ModbusTag4
+  Id: g=37a18a17d71853db50edadf37019987a
+  Type: ModbusTag
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: ModbusMemoryArea
+    Value: 1
+- Name: ModbusTag5
+  Type: ModbusTag
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: ModbusMemoryArea
+    Value: 1
+- Name: ModbusTag6
+  Type: ModbusTag
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: ModbusMemoryArea
+    Value: 1
+- Name: ModbusTag7
+  Type: ModbusTag
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: ModbusMemoryArea
+    Value: 1

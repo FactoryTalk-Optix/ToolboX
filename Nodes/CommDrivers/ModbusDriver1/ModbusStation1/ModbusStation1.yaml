@@ -1,0 +1,64 @@
+Name: ModbusStation1
+Type: ModbusStation
+Children:
+- Name: MaximumJobSizeInBytes
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Value: 128
+- Name: MaximumGapInBytes
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Value: 4
+- Name: UnitIdentifier
+  Type: BaseDataVariableType
+  DataType: Byte
+  Value: 1
+- Name: WriteMultipleCoils
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true
+- Name: WriteMultipleRegisters
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true
+- Name: IPAddress
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "192.168.0.1"
+- Name: Port
+  Type: BaseDataVariableType
+  DataType: UInt16
+  Value: 502
+- Name: Timeout
+  Type: BaseDataVariableType
+  DataType: Duration
+  Value: "0:00:00:5.0000000"
+- Name: OperationCode
+  Type: BaseDataVariableType
+  DataType: CommunicationOperationCode
+  AccessLevel: Read
+  Value: 0
+- Class: Reference
+  Target: ns=19;i=29
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=30
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=67
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=31
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=94
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=96
+  Direction: Forward
+- File: Tags/Tags.yaml
+- Name: Types
+  Type: FolderType
+  Children:
+  - File: DataTypes/DataTypes.yaml
+  - File: VariableTypes/VariableTypes.yaml

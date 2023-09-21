@@ -1,0 +1,25 @@
+Name: Users
+Id: g=8cdfe95c558e909385d4fe7ddc9a2655
+Type: UsersCategoryFolder
+Children:
+- Name: User1
+  Id: g=88ac525d48e2e5d6889f189ea98bca58
+  Type: UserType
+  Children:
+  - Name: Variable1
+    Id: g=d6849786873449df90d57776d8698218
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=537c5c4ebf09f06fdf902699a7c0ac1b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag5"
+      Children:
+      - Name: Mode
+        Id: g=efec187d416ec39b6289ee4998bcecab
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2

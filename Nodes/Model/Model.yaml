@@ -1,0 +1,91 @@
+Name: Model
+Id: g=a9d355d646f54c18d3ce7e831c81606a
+Type: ModelCategoryFolder
+Children:
+- File: Folder1/Folder1.yaml
+- Name: Pulse
+  Type: BaseObjectType
+  Children:
+  - Name: Variable1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Variable2
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag2"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Variable3
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../CommDrivers/ModbusDriver1/ModbusStation1/Tags/ModbusTag3"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: RecipeA
+  Type: BaseObjectType
+  Children:
+  - Name: Variable1
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Variable2
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Variable3
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 0
+  - Name: Variable4
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 0.0
+  - Name: Variable5
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Variable6
+    Type: BaseDataVariableType
+    DataType: SByte
+    Value: 0
+  - Name: Variable7
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:0.0000000"
+- Name: Variable1
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 12
+- Name: Variable2
+  Type: BaseDataVariableType
+  DataType: Int32
+  ValueRank: OneDimension
+  ArrayDimensions: [2]
+  Value: [0,0]

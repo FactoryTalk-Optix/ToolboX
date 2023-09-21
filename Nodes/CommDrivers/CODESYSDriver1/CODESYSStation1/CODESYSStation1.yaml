@@ -1,0 +1,49 @@
+Name: CODESYSStation1
+Id: g=10efbdc8c342bb49cbcc03c88e59e984
+Type: CODESYSStation
+Children:
+- Name: GatewayIP
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "127.0.0.1"
+- Name: Port
+  Type: BaseDataVariableType
+  DataType: UInt16
+  Value: 1217
+- Name: PLCAddress
+  Type: BaseDataVariableType
+  DataType: String
+  Value: ""
+- Name: Timeout
+  Type: BaseDataVariableType
+  DataType: Duration
+  Value: "0:00:00:5.0000000"
+- Name: OperationCode
+  Type: BaseDataVariableType
+  DataType: CommunicationOperationCode
+  AccessLevel: Read
+  Value: 0
+- Class: Reference
+  Target: ns=19;i=29
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=30
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=67
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=31
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=94
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=96
+  Direction: Forward
+- File: Tags/Tags.yaml
+- Name: Types
+  Type: FolderType
+  Children:
+  - File: DataTypes/DataTypes.yaml
+  - File: VariableTypes/VariableTypes.yaml

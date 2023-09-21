@@ -1,0 +1,17 @@
+Name: Tags
+Type: FolderType
+Children:
+- Name: S7TCPTag1
+  Type: S7TCPTag
+  DataType: Int32
+  Value: 0
+- Name: StructuredTag1
+  Type: TagStructure
+  DataType: Int32
+  Value: 0
+- Name: S7TCPTag2
+  Type: S7TCPTag
+  DataType: Int32
+  ValueRank: OneDimension
+  ArrayDimensions: [50]
+  Value: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]

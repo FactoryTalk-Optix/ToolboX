@@ -1,0 +1,2569 @@
+Name: Tags
+Type: FolderType
+Children:
+- Name: Application
+  Type: TagStructure
+  DataType: Structure
+  Value: 
+   {
+    "Type": 22,
+    "Body": {
+     "TypeId": {
+      "Id": 22
+     }
+    }
+   }
+  Children:
+  - Name: PLC_PRG
+    Id: g=4fc99b46aa3b2a8bd3273fdcc7183a4f
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "Id": 22
+       }
+      }
+     }
+    Children:
+    - Name: SpindleArray
+      Type: TagStructure
+      DataType: Structure
+      ValueRank: OneDimension
+      ArrayDimensions: [10]
+      Value: {"Type":22,"Body":[{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}}]}
+      Children:
+      - Name: 0
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[0].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[0].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[0].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[1].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[1].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[1].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[2].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[2].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[2].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 3
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[3].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[3].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[3].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 4
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[4].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[4].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[4].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 5
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[5].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[5].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[5].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 6
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[6].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[6].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[6].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 7
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[7].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[7].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[7].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 8
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[8].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[8].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[8].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 9
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[9].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[9].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[9].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+    - Name: b_1
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.b_1"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+    - Name: IntBiArray
+      Type: CODESYSTag
+      DataType: Int16
+      ValueRank: 2
+      ArrayDimensions: [10,2]
+      Value: 
+       {
+        "Type": 4,
+        "Dimensions": [10,2],
+        "Body": [
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0
+        ]
+       }
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.IntBiArray"
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+    - Name: FanArray
+      Type: TagStructure
+      DataType: Structure
+      ValueRank: OneDimension
+      ArrayDimensions: [11]
+      Value: {"Type":22,"Body":[{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}}]}
+      Children:
+      - Name: 10
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[10].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[10].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 1
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[1].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[1].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 2
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[2].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[2].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 3
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[3].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[3].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 4
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[4].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[4].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 5
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[5].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[5].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 6
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[6].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[6].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 7
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[7].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[7].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 8
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[8].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[8].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+      - Name: 9
+        Type: TagStructure
+        DataType: BaseDataType
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[9].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[9].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+    - Name: IntArray
+      Type: CODESYSTag
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [11]
+      Value: ["","","","","","","","","","",""]
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.IntArray"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 72
+    - Name: nInt_2
+      Type: CODESYSTag
+      DataType: Int16
+      Value: 0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.nInt_2"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+    - Name: nInt_1
+      Type: CODESYSTag
+      DataType: Int16
+      Value: 0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.nInt_1"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+    - Name: ComboString
+      Type: CODESYSTag
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [51]
+      Value: ["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.ComboString"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 78
+    - Name: b_2
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.b_2"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+  - Name: PLC_PRG1
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "Id": 22
+       }
+      }
+     }
+    Children:
+    - Name: IntArray
+      Type: CODESYSTag
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [11]
+      Value: ["","","","","","","","","","",""]
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.IntArray"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 72
+      - Name: Encoding
+        Type: BaseDataVariableType
+        DataType: ns=26;Encoding
+        Value: 0
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+    - Name: nInt_2
+      Type: CODESYSTag
+      DataType: Int16
+      Value: 0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.nInt_2"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+    - Name: nInt_1
+      Type: CODESYSTag
+      DataType: Int16
+      Value: 0
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.nInt_1"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+    - Name: FanArray
+      Type: TagStructure
+      DataType: Structure
+      ValueRank: OneDimension
+      ArrayDimensions: [11]
+      Value: {"Type":22,"Body":[{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}}]}
+      Children:
+      - Name: 10
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[10].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[10].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[1].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[1].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[2].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[2].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 3
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[3].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[3].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 4
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[4].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[4].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 5
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[5].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[5].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 6
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[6].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[6].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 7
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[7].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[7].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 8
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[8].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[8].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 9
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: rpm
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[9].rpm"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: running
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.FanArray[9].running"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+    - Name: ComboString
+      Type: CODESYSTag
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [51]
+      Value: ["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.ComboString"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 78
+      - Name: Encoding
+        Type: BaseDataVariableType
+        DataType: ns=26;Encoding
+        Value: 0
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+    - Name: b_2
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.b_2"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+    - Name: SpindleArray
+      Type: TagStructure
+      DataType: Structure
+      ValueRank: OneDimension
+      ArrayDimensions: [10]
+      Value: {"Type":22,"Body":[{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}}]}
+      Children:
+      - Name: 0
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[0].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[0].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[0].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[1].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[1].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[1].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[2].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[2].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[2].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 3
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[3].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[3].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[3].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 4
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[4].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[4].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[4].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 5
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[5].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[5].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[5].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 6
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[6].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[6].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[6].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 7
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[7].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[7].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[7].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 8
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[8].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[8].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[8].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+      - Name: 9
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: current
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[9].current"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: speed
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[9].speed"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+        - Name: status
+          Type: CODESYSTag
+          DataType: Int16
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Application.PLC_PRG.SpindleArray[9].status"
+          - Name: MaximumLength
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 80
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: []
+    - Name: b_1
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.b_1"
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+    - Name: IntBiArray
+      Type: CODESYSTag
+      DataType: Int16
+      ValueRank: 2
+      ArrayDimensions: [10,2]
+      Value: 
+       {
+        "Type": 4,
+        "Dimensions": [10,2],
+        "Body": [
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0,
+         0,0
+        ]
+       }
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Application.PLC_PRG.IntBiArray"
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: []
+      - Name: MaximumLength
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80
