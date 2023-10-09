@@ -41,7 +41,6 @@ Children:
   Type: PropertyGroup
 - File: UI/UI.yaml
 - File: Model/Model.yaml
-- File: Converters/Converters.yaml
 - File: Alarms/Alarms.yaml
 - File: Recipes/Recipes.yaml
 - File: Loggers/Loggers.yaml
@@ -63,3 +62,4 @@ Children:
     Type: PropertyType
     DataType: NodeId
     Value: {"IdType":2,"Id":"0a13517a61e53a5f92be70405784a61d","Namespace":28}
+- File: Converters/Converters.yaml

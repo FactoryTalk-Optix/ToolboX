@@ -17,6 +17,7 @@ namespace utilx.Utils
         private const string _MESSAGE_PROJECT_UNREFERENCED_TAGS_NUMBER = "Total unreferenced tags:";
         private const string _MESSAGE_PROJECT_BROKEN_DYNAMIC_LINKS = "Broken dynamic links:";
         private const string _MESSAGE_PROJECT_NODES_NUMEBER = "Project nodes:";
+        private const string _MESSAGE_PROJECT_NET_LOGIC_METHODS = "Project C# methods:";
         private const string _LOG_PREFIX = "--- ";
 
         public List<FTOptix.CommunicationDriver.Tag> Tags { get; set; }
@@ -24,6 +25,8 @@ namespace utilx.Utils
         public List<IUANode> BrokenDynamicLinks { get; set; }
 
         public int NodesCount { get; set; }
+
+        public List<string> ProjectNetLogicMethods { get; set; }
 
         public UtilsProjectInformations(IUAObject logicObject)
         {
@@ -42,6 +45,7 @@ namespace utilx.Utils
             Tags = GetAllTags();
             UnreferencedTags = Tags.Where(t => !referencedNodes.Select(n => n.NodeId).Contains(t.NodeId)).ToList();
             BrokenDynamicLinks = GetBrokenDynamicLinks(nodesWithDLink);
+            ProjectNetLogicMethods = GetAllScriptMethods();
 
             LogProjectInfos();
         }
@@ -58,12 +62,15 @@ namespace utilx.Utils
         /// </summary>
         public void LogProjectInfos()
         {
+
             foreach (var t in UnreferencedTags) Log.Info($"Unreferenced {t.BrowseName} {Log.Node(t)}");
             Log.Info($"{_LOG_PREFIX} {_MESSAGE_PROJECT_UNREFERENCED_TAGS_NUMBER} {UnreferencedTags.Count}");
             foreach (var t in BrokenDynamicLinks) Log.Info($"{Log.Node(t)} has broken link: {t.GetVariable("DynamicLink").Value.Value}");
             Log.Info($"{_LOG_PREFIX} {_MESSAGE_PROJECT_BROKEN_DYNAMIC_LINKS} {BrokenDynamicLinks.Count}");
             Log.Info($"{_LOG_PREFIX} {_MESSAGE_PROJECT_TAGS_NUMBER} {Tags.Count}");
             Log.Info($"{_LOG_PREFIX} {_MESSAGE_PROJECT_NODES_NUMEBER} {NodesCount}");
+            Log.Info($"{_LOG_PREFIX} {_MESSAGE_PROJECT_NET_LOGIC_METHODS}");
+            foreach (var t in ProjectNetLogicMethods) Log.Info($"{t}");
         }
 
         /// <summary>
@@ -72,7 +79,22 @@ namespace utilx.Utils
         /// <returns>An int.</returns>
         public static int GetProjectNodesNumber() => Project.Current.Parent.Owner.FindNodesByType<IUANode>().Count();
 
+        /// <summary>
+        /// Retrieve all project's C# methods
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> GetAllScriptMethods()
+        {
+            var res = new List<string>();
+            var netLogicObjects = Project.Current.Parent.FindNodesByType<FTOptix.NetLogic.NetLogicObject>().ToList();
+            foreach (var script in netLogicObjects)
+            {
+                var methods = script.Children.Where(s => s is UAMethod).Select(s => s.BrowseName);
+                res.Add(script.BrowseName + " has methods: " + string.Join(", ", methods));
+            }
 
+            return res;
+        }
 
         #region private methods
 

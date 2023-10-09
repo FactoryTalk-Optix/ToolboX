@@ -21,6 +21,7 @@ All classes expose certain methods that can be used on Runtime or Design-time Ne
   - Project Tags
   - Project unreferenced tags
   - List of broken dynamic links
+  - List of all existing methods
   - ... more to come
  
 ## UtilsRecipe.cs
