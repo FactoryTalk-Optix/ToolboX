@@ -9,6 +9,7 @@ using FTOptix.Alarm;
 using FTOptix.CODESYS;
 using utilx.Utils;
 using FTOptix.DataLogger;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class FromPLCToModel : BaseNetLogic

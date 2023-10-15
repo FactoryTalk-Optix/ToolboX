@@ -18,6 +18,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using utilx.Utils;
 using FTOptix.DataLogger;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class RuntimeNetLogic1 : BaseNetLogic

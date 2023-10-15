@@ -18,6 +18,7 @@ using FTOptix.Core;
 using utilx.Utils;
 using FTOptix.CODESYS;
 using FTOptix.DataLogger;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class PanelLoaderHistory : BaseNetLogic

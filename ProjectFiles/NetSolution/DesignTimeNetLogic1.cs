@@ -11,6 +11,7 @@ using FTOptix.HMIProject;
 using FTOptix.Core;
 using FTOptix.CODESYS;
 using FTOptix.DataLogger;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public partial class DesignTimeNetLogic1 : BaseNetLogic

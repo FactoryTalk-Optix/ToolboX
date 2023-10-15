@@ -18,6 +18,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.EventLogger;
 using FTOptix.CODESYS;
 using FTOptix.DataLogger;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class RecipesEditorUISetup : BaseNetLogic

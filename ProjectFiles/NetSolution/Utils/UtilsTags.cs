@@ -99,7 +99,7 @@ namespace utilx.Utils
                     }
                     else
                     {
-                        var tagStructure = InformationModel.Make<FTOptix.CommunicationDriver.TagStructure>(GetBrowseName(values, header));
+                        var tagStructure = InformationModel.MakeVariable<TagStructure>(GetBrowseName(values, header), UAManagedCore.OpcUa.DataTypes.Structure);
                         GenerateTagStructure(values, header, tagStructure);
                     }
                 }
@@ -117,7 +117,7 @@ namespace utilx.Utils
         private void GenerateTagStructure(string[] values, string[] header, UAVariable tStructure)
         {
             var tagBrowsePath = GetBrowsePath(values, header);
-            var owner = GetOwnerNode(_startingNode, tagBrowsePath);
+            var owner = GetOwnerNode(_startingNode, tagBrowsePath, false);
             var alreadyExistingNode = NodeAlreadyExists(owner, tStructure) != null;
 
             if (!alreadyExistingNode)
@@ -194,7 +194,7 @@ namespace utilx.Utils
                     }
                 }
 
-                var owner = GetOwnerNode(_startingNode, tagBrowsePath);
+                var owner = GetOwnerNode(_startingNode, tagBrowsePath,true);
                 var alreadyExistingTag = NodeAlreadyExists(owner, tag);
 
                 if (alreadyExistingTag != null)
@@ -258,15 +258,21 @@ namespace utilx.Utils
 
         private static IUANode NodeAlreadyExists(IUANode tagOwner, IUANode tag) => tagOwner.Children.FirstOrDefault(t => t.BrowseName == tag.BrowseName);
 
-        private static IUANode GetOwnerNode(IUANode startingNode, string relativePath)
+        private static IUANode GetOwnerNode(IUANode startingNode, string relativePath, bool generateOwner)
         {
-            var rawPath = relativePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
-            var path = new string[rawPath.Length - 2];
-            Array.Copy(rawPath, 1, path, 0, rawPath.Length - 2);
-            var tagOwner = startingNode;
-
-            foreach (var nodeName in path) tagOwner = tagOwner.Get(nodeName);
-
+            // set the owner with starting node
+            IUANode tagOwner = startingNode;
+            // split the path string to retrive an array with all owners of the node
+            string[] pathElements = relativePath.Split('/', StringSplitOptions.RemoveEmptyEntries);
+            // Jump the first owner (the ancestral is linked to netlogic) and check if all owners exists
+            for (int i=1; i<pathElements.Length-1; i++)
+            {
+                // If the owner not exist and the flag generate is true, create a new TagStructure and add to current tagOwner
+                if (tagOwner.Get(pathElements[i]) == null && generateOwner) tagOwner.Add(InformationModel.MakeVariable<TagStructure>(pathElements[i], UAManagedCore.OpcUa.DataTypes.Structure));
+                // Retrive the sub owner by get function of actual owner
+                tagOwner = tagOwner?.Get(pathElements[i]);
+            }
+            // return the near owner of the node
             return tagOwner;
         }
 

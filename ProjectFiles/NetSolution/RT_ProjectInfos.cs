@@ -20,6 +20,7 @@ using FTOptix.Store;
 using FTOptix.EventLogger;
 using FTOptix.CODESYS;
 using FTOptix.DataLogger;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class RT_ProjectInfos : BaseNetLogic
