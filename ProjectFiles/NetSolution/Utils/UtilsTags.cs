@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using UAManagedCore;
 
@@ -117,7 +118,7 @@ namespace utilx.Utils
         private void GenerateTagStructure(string[] values, string[] header, UAVariable tStructure)
         {
             var tagBrowsePath = GetBrowsePath(values, header);
-            var owner = GetOwnerNode(_startingNode, tagBrowsePath, false);
+            var owner = GetOwnerNode(_startingNode, tagBrowsePath, true);
             var alreadyExistingNode = NodeAlreadyExists(owner, tStructure) != null;
 
             if (!alreadyExistingNode)
@@ -256,19 +257,25 @@ namespace utilx.Utils
             }
         }
 
-        private static IUANode NodeAlreadyExists(IUANode tagOwner, IUANode tag) => tagOwner.Children.FirstOrDefault(t => t.BrowseName == tag.BrowseName);
+        private static IUANode NodeAlreadyExists(IUANode tagOwner, IUANode tag) => tagOwner?.Children.FirstOrDefault(t => t.BrowseName == tag.BrowseName);
 
-        private static IUANode GetOwnerNode(IUANode startingNode, string relativePath, bool generateOwner)
+        private IUANode GetOwnerNode(IUANode startingNode, string relativePath, bool generateOwner)
         {
             // set the owner with starting node
             IUANode tagOwner = startingNode;
+            // if starting node is null, return null
+            if (tagOwner == null) return null;
             // split the path string to retrive an array with all owners of the node
             string[] pathElements = relativePath.Split('/', StringSplitOptions.RemoveEmptyEntries);
             // Jump the first owner (the ancestral is linked to netlogic) and check if all owners exists
             for (int i=1; i<pathElements.Length-1; i++)
             {
                 // If the owner not exist and the flag generate is true, create a new TagStructure and add to current tagOwner
-                if (tagOwner.Get(pathElements[i]) == null && generateOwner) tagOwner.Add(InformationModel.MakeVariable<TagStructure>(pathElements[i], UAManagedCore.OpcUa.DataTypes.Structure));
+                if (tagOwner.Get(pathElements[i]) == null && generateOwner) 
+                {
+                    tagOwner.Add(InformationModel.MakeVariable<TagStructure>(pathElements[i], UAManagedCore.OpcUa.DataTypes.Structure));
+                    _tagStructuresCreated++;
+                }
                 // Retrive the sub owner by get function of actual owner
                 tagOwner = tagOwner?.Get(pathElements[i]);
             }
@@ -462,6 +469,13 @@ namespace utilx.Utils
 
         private static NodeId GetOpcUaDataType(string tagDataTypeString)
         {
+            object objRet=null;
+            // Create the regex for finding type incasesensitive
+            Regex regexPat = new Regex($@"(?i)\b{tagDataTypeString}\b");
+            // With the regex check inside the Fields od OpcUA.DataType for get the NodeID of UA Type
+            NodeId NodeIdType = (NodeId)typeof(UAManagedCore.OpcUa.DataTypes).GetFields().Where(x => regexPat.Match(x.Name).Success && x.FieldType == typeof(NodeId)).First().GetValue(objRet);
+            // in case of success, return the NodeId, otherwise try with DataTypesHelper
+            if (NodeIdType != null) return NodeIdType;
             var tagNetType = GetNetTypeFromOPCUAType(tagDataTypeString);
 
             switch (Type.GetTypeCode(tagNetType))
