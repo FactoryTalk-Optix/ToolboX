@@ -1,9 +1,11 @@
-﻿using FTOptix.Core;
+using FTOptix.Core;
 using FTOptix.CoreBase;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
+using FTOptix.OPCUAClient;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -11,6 +13,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UAManagedCore;
+using OpcUa = UAManagedCore.OpcUa;
+
 
 namespace utilx.Utils
 {
@@ -31,6 +35,12 @@ namespace utilx.Utils
         , DYNAMICLINK_ATTRIBUTE
         , VARIABLE_VALUE
         , CUSTOM_TYPE
+        , DESCRIPTION
+        , DESCRIPTION_KEY
+        , ENGINEERING_UNIT
+        , MIN
+        , MAX
+        , CONSTRAIN
         };
 
         private const string TYPE_ATTRIBUTE = "Type";
@@ -41,6 +51,12 @@ namespace utilx.Utils
         private const string DYNAMICLINK_ATTRIBUTE = "DynamicLink";
         private const string VARIABLE_VALUE = "Value";
         private const string CUSTOM_TYPE = "CustomType";
+        private const string DESCRIPTION = "Description";
+        private const string DESCRIPTION_KEY = "DescriptionKey";
+        private const string ENGINEERING_UNIT = "EngineeringUnit";
+        private const string MIN = "Min";
+        private const string MAX = "Max";
+        private const string CONSTRAIN = "Constrain";
 
         public UtilsModel(IUAObject logicObject, IUANode startingNode)
         {
@@ -66,7 +82,7 @@ namespace utilx.Utils
 
         private void UpdateModelFromCsv()
         {
-             _startingNode.Children.Clear(); 
+            _startingNode.Children.Clear();
             using (StreamReader sReader = new StreamReader(_modelCsvUri))
             {
                 var header = sReader.ReadLine();
@@ -84,23 +100,30 @@ namespace utilx.Utils
         {
             try
             {
-                var type = nodeData[Array.IndexOf(header, TYPE_ATTRIBUTE)];
-                var browseName = nodeData[Array.IndexOf(header, BROWSENAME_ATTRIBUTE)];
-                var browsePath = nodeData[Array.IndexOf(header, BROWSEPATH_ATTRIBUTE)];
-                var dataType = nodeData[Array.IndexOf(header, DATATYPE_ATTRIBUTE)];
-                var arrayLength = nodeData[Array.IndexOf(header, ARRAYLENGTH_ATTRIBUTE)];
-                var dynamicLink = nodeData[Array.IndexOf(header, DYNAMICLINK_ATTRIBUTE)];
-                var value = nodeData[Array.IndexOf(header, VARIABLE_VALUE)];
+                var csvType = nodeData[Array.IndexOf(header, TYPE_ATTRIBUTE)];
+                var csvBrowseName = nodeData[Array.IndexOf(header, BROWSENAME_ATTRIBUTE)];
+                var csvBrowsePath = nodeData[Array.IndexOf(header, BROWSEPATH_ATTRIBUTE)];
+                var csvDataType = nodeData[Array.IndexOf(header, DATATYPE_ATTRIBUTE)];
+                var csvArrayLength = nodeData[Array.IndexOf(header, ARRAYLENGTH_ATTRIBUTE)];
+                var csvDynamicLink = nodeData[Array.IndexOf(header, DYNAMICLINK_ATTRIBUTE)];
+                var csvValue = nodeData[Array.IndexOf(header, VARIABLE_VALUE)];
+                var csvDescription = nodeData[Array.IndexOf(header, DESCRIPTION)];
+                var csvDescriptionKey = nodeData[Array.IndexOf(header, DESCRIPTION_KEY)];
+                var csvEngineeringUnit = nodeData[Array.IndexOf(header, ENGINEERING_UNIT)];
 
-                var isUAObject = type == typeof(UAManagedCore.UAObject).Name;
-                var isFolder = type == typeof(FTOptix.Core.Folder).Name;
-                var isUAVariable = type == typeof(UAManagedCore.UAVariable).Name;
+                var isUAObject = csvType == typeof(UAManagedCore.UAObject).Name;
+                var isFolder = csvType == typeof(FTOptix.Core.Folder).Name;
+                var isUAVariable = csvType == typeof(UAManagedCore.UAVariable).Name;
 
-                var nodeOwner = GetOwnerNode(_startingNode, browsePath);
+                var nodeOwner = GetOwnerNode(_startingNode, csvBrowsePath);
 
                 if (isUAObject)
                 {
-                    var iuaObj = InformationModel.MakeObject(browseName);
+                    var iuaObj = InformationModel.MakeObject(csvBrowseName);
+                    if (csvDescriptionKey != "")
+                        iuaObj.Description.TextId = csvDescriptionKey;
+                    if (csvDescription != "")
+                        iuaObj.Description.Text = csvDescription;
                     var existingNode = NodeAlreadyExists(nodeOwner, iuaObj);
 
                     if (existingNode == null)
@@ -110,7 +133,11 @@ namespace utilx.Utils
                 }
                 else if (isFolder)
                 {
-                    var folder = InformationModel.Make<Folder>(browseName);
+                    var folder = InformationModel.Make<Folder>(csvBrowseName);
+                    if (csvDescriptionKey != "")
+                        folder.Description.TextId = csvDescriptionKey;
+                    if (csvDescription != "")
+                        folder.Description.Text = csvDescription;
                     var existingNode = NodeAlreadyExists(nodeOwner, folder);
 
                     if (existingNode == null)
@@ -120,42 +147,56 @@ namespace utilx.Utils
                 }
                 else if (isUAVariable)
                 {
-                    var uaVarDataType = GetOpcUaDataTypeFromStringOpcUaDataType(dataType);
+                    var uaVarDataType = GetOpcUaDataTypeFromStringOpcUaDataType(csvDataType);
                     IUAVariable uaVar = null;
 
-                    if (arrayLength != string.Empty)
+                    if (csvArrayLength != string.Empty)
                     {
-                        var isMatrix = arrayLength.Contains(_arraySeparator);
+                        var isMatrix = csvArrayLength.Contains(_arraySeparator);
                         if (isMatrix)
                         {
-                            var indexes = arrayLength.Split(_arraySeparator);
+                            var indexes = csvArrayLength.Split(_arraySeparator);
                             var index0 = uint.Parse(indexes[0]);
                             var index1 = uint.Parse(indexes[1]);
-                            uaVar = InformationModel.MakeVariable(browseName, uaVarDataType, new uint[2]);
+                            uaVar = InformationModel.MakeVariable(csvBrowseName, uaVarDataType, new uint[2]);
                             uaVar.ArrayDimensions = new uint[] { index0, index1 };
                         }
                         else
                         {
-                            uaVar = InformationModel.MakeVariable(browseName, uaVarDataType, new uint[1]);
-                            var index = uint.Parse(arrayLength);
+                            uaVar = InformationModel.MakeVariable(csvBrowseName, uaVarDataType, new uint[1]);
+                            var index = uint.Parse(csvArrayLength);
                             uaVar.ArrayDimensions = new uint[] { index };
                         }
-
                     }
                     else
                     {
-                        uaVar = InformationModel.MakeVariable(browseName, uaVarDataType);
+                        uaVar = InformationModel.MakeVariable(csvBrowseName, uaVarDataType);
                     }
 
-                    var hasDynamicLink = dynamicLink != string.Empty;
+                    var hasDynamicLink = csvDynamicLink != string.Empty;
                     if (hasDynamicLink)
                     {
-                        SetDynamicLinkOnVariable(uaVar, dynamicLink);
+                        SetDynamicLinkOnVariable(uaVar, csvDynamicLink);
                     }
                     else
                     {
-                        UpdateTagValue(uaVar, value, uaVarDataType);
+                        UpdateTagValue(uaVar, csvValue, uaVarDataType);
                     }
+
+                    //var desc = InformationModel.Make<DescriptionAttribute>("Description");
+
+                    // if (csvDescriptionKey != "") {
+                    //     uaVar.Description = new LocalizedText(uaVar.NodeId.NamespaceIndex, csvDescriptionKey);
+                    // } else if (csvDescription != "") {
+                    //     uaVar.Description.Text = csvDescription;
+                    // }
+
+                    // if (csvEngineeringUnit != "") {
+                    //     var eu = InformationModel.Make<EUInformation>("EngineeringUnits");
+                    //     eu.GetVariable("UnitId").Value = Convert.ToInt32(csvEngineeringUnit);
+                    //     uaVar.Add(eu);
+
+                    // }
 
                     var existingNode = NodeAlreadyExists(nodeOwner, uaVar);
 
@@ -170,9 +211,8 @@ namespace utilx.Utils
                 }
                 else
                 {
-                    Log.Warning("Type: " + type + " browsename: " + browseName + " is not managed by script");
+                    Log.Warning("Type: " + csvType + " browsename: " + csvBrowseName + " is not managed by script");
                 }
-
                 return null;
             }
             catch (System.Exception ex)
@@ -196,6 +236,11 @@ namespace utilx.Utils
                 destinationVar.ResetDynamicLink();
                 UpdateTagValue(destinationVar, sourceVar.Value, sourceVar.DataType);
             }
+
+            if (sourceVar.Description.TextId != "")
+                destinationVar.Description.TextId = sourceVar.Description.TextId;
+            else if (sourceVar.Description.Text != "")
+                destinationVar.Description.Text = sourceVar.Description.Text;
         }
 
         private static void SetDynamicLinkOnVariable(IUAVariable destinationVar, UAValue dlValue)
@@ -233,13 +278,13 @@ namespace utilx.Utils
 
         private static string GetCsvRowThirdElement(string row) => row.Split(_csvSeparator)[2].Trim();
 
-        private static string GetObjectCustomeTypeBrowseName(IUANode item) => ((UAManagedCore.UANode)((UAManagedCore.UAObject)item).ObjectType).BrowseName;
+        private static string GetObjectCustomTypeBrowseName(IUANode item) => ((UAManagedCore.UANode)((UAManagedCore.UAObject)item).ObjectType).BrowseName;
 
         private bool IsCustomObjectTypeInstance(IUANode item) =>
                 item is not IUAObjectType
                 && item is not Folder
                 && item is not IUAVariable
-                && !new[] { string.Empty, "BaseObjectType" }.Contains(GetObjectCustomeTypeBrowseName(item));
+                && !new[] { string.Empty, "BaseObjectType" }.Contains(GetObjectCustomTypeBrowseName(item));
 
 
         private string CreateCsvRow(IUANode item)
@@ -272,6 +317,10 @@ namespace utilx.Utils
                                     : string.Empty;
 
                 var value = string.Empty;
+                var engineeringUnit = string.Empty;
+                var min = string.Empty;
+                var max = string.Empty;
+                var constrain = string.Empty;
 
                 if (isUAVariable && ((IUAVariable)item).Value.Value != null)
                 {
@@ -284,11 +333,31 @@ namespace utilx.Utils
                     {
                         value = BackupTagScalarValue(tagValue);
                     }
+                    //engineeringUnit = ((IUAVariable)item).
+                    if (item.GetVariable("EURange/Low") != null)
+                    {
+                        min = item.GetVariable("EURange/Low").Value;
+                    }
+                    if (item.GetVariable("EURange/High") != null)
+                    {
+                        max = item.GetVariable("EURange/High").Value;
+                    }
+                    if (item.GetVariable("EURange/Constrain") != null)
+                    {
+                        constrain = item.GetVariable("EURange/Constrain").Value;
+                    }
+                    if (item.GetVariable("EngineeringUnits/UnitId") != null) {
+                        engineeringUnit = item.GetVariable("EngineeringUnits/UnitId").Value;
+                    }
                 }
 
                 var customType = isCustomObjectTypeInstance ?
-                                    GetObjectCustomeTypeBrowseName(item)
+                                    GetObjectCustomTypeBrowseName(item)
                                     : string.Empty;
+
+                var description = item.Description.Text.Replace(";", "");
+                var descriptionKey = item.Description.TextId;
+
 
                 return String.Join(_csvSeparator, new List<string>() {
                 type,
@@ -298,7 +367,13 @@ namespace utilx.Utils
                 arrayLength,
                 dynamicLink,
                 value,
-                customType
+                customType,
+                description,
+                descriptionKey,
+                engineeringUnit,
+                min,
+                max,
+                constrain
             });
             }
             catch (System.Exception ex)
@@ -306,7 +381,6 @@ namespace utilx.Utils
                 Log.Error(MethodBase.GetCurrentMethod().Name + " Item: " + item.BrowseName, ex.Message);
                 return string.Empty;
             }
-
         }
 
         private string BackupTagArrayValue(object tagValue)

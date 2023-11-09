@@ -17,6 +17,8 @@ using FTOptix.Alarm;
 using FTOptix.CODESYS;
 using utilx.Utils;
 using FTOptix.DataLogger;
+using FTOptix.RAEtherNetIP;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class ImportExportTags : BaseNetLogic

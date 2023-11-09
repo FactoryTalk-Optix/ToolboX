@@ -19,9 +19,11 @@ using FTOptix.Core;
 using utilx.Utils;
 using FTOptix.DataLogger;
 using FTOptix.S7TiaProfinet;
+using FTOptix.RAEtherNetIP;
+using FTOptix.OPCUAServer;
 #endregion
 
-public class RuntimeNetLogic1 : BaseNetLogic
+public class DatabaseCommands : BaseNetLogic
 {
     private UtilsStore utilsStore;
 

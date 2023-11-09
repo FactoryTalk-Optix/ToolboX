@@ -10,6 +10,8 @@ using FTOptix.CODESYS;
 using utilx.Utils;
 using FTOptix.DataLogger;
 using FTOptix.S7TiaProfinet;
+using FTOptix.RAEtherNetIP;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class FromPLCToModel : BaseNetLogic

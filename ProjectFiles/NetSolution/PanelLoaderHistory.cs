@@ -19,6 +19,8 @@ using utilx.Utils;
 using FTOptix.CODESYS;
 using FTOptix.DataLogger;
 using FTOptix.S7TiaProfinet;
+using FTOptix.RAEtherNetIP;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class PanelLoaderHistory : BaseNetLogic

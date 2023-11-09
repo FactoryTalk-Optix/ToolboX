@@ -21,6 +21,8 @@ using FTOptix.EventLogger;
 using FTOptix.CODESYS;
 using FTOptix.DataLogger;
 using FTOptix.S7TiaProfinet;
+using FTOptix.RAEtherNetIP;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class RT_ProjectInfos : BaseNetLogic
